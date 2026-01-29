@@ -1,34 +1,33 @@
 class Maenifold < Formula
   desc "Test-time adaptive reasoning infrastructure for AI agents"
   homepage "https://github.com/msbrettorg/maenifold"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/msbrettorg/maenifold/releases/download/v#{version}/maenifold-osx-arm64.tar.gz"
-      sha256 "PLACEHOLDER_OSX_ARM64"
+      url "https://github.com/msbrettorg/maenifold/releases/download/v1.0.3/maenifold-osx-arm64.tar.gz"
+      sha256 "eb5c6449de74354a7e198b0eaee030096ed72be01bda40a556767da1c5d8dfe9"
     end
     on_intel do
-      url "https://github.com/msbrettorg/maenifold/releases/download/v#{version}/maenifold-osx-x64.tar.gz"
-      sha256 "PLACEHOLDER_OSX_X64"
+      url "https://github.com/msbrettorg/maenifold/releases/download/v1.0.3/maenifold-osx-x64.tar.gz"
+      sha256 ""
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/msbrettorg/maenifold/releases/download/v#{version}/maenifold-linux-arm64.tar.gz"
-      sha256 "PLACEHOLDER_LINUX_ARM64"
+      url "https://github.com/msbrettorg/maenifold/releases/download/v1.0.3/maenifold-linux-arm64.tar.gz"
+      sha256 ""
     end
     on_intel do
-      url "https://github.com/msbrettorg/maenifold/releases/download/v#{version}/maenifold-linux-x64.tar.gz"
-      sha256 "PLACEHOLDER_LINUX_X64"
+      url "https://github.com/msbrettorg/maenifold/releases/download/v1.0.3/maenifold-linux-x64.tar.gz"
+      sha256 "612fc620979c4aed01dcaf4347e2b1b7f227a1e5f57c6c1ab901d7e8fbb707d7"
     end
   end
 
   def install
     bin.install "maenifold"
-    # Install assets directory alongside binary
     (share/"maenifold").install "assets" if File.directory?("assets")
   end
 
